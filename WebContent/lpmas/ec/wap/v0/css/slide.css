@@ -1,0 +1,62 @@
+*{padding:0;margin:0;list-style:none;border:0;}
+/* 焦点图 */
+#show {
+	position: relative;
+	width: 100%;
+	height:100%;
+
+}
+#show a {
+	float: left;
+	display: inline;
+}
+#show .img {
+	position:relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+
+}
+#show img span a img{width:100%;min-height: 10rem }
+#show .img SPAN {
+	position: absolute;
+	width: 100%;
+	display: block
+}
+#show .btns {
+	z-index: 10;
+	position: relative;
+	width: 100%;
+	top:-30px;
+}
+#show .btns B {
+	position: relative;
+	display: block;
+	height: 14px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+#show .btns B I {
+	width: 8px;
+	background: #000;
+	float: left;
+	height: 8px;
+	font-size: 0px;
+	overflow: hidden;
+	cursor: pointer;
+	margin-right: 6px;
+	border: #000 2px solid;
+	-webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	border-radius: 7px
+}
+#show .btns B I.on {
+	background:#fff;
+	cursor: default;
+	border: #fff 2px solid;
+}
+#show .btns B I.on:hover {
+	background: #fff;
+	cursor: default
+}
+

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<message_group>
+	<group_config_list>
+		<group_config>
+			<app_id>Payment</app_id>
+			<group_id>ow_group</group_id>
+		</group_config>
+	</group_config_list>
+
+	<group_member_list>
+		<group_member>
+			<group_id>ow_group</group_id>
+			<config_file>/config/payment_tcp.xml</config_file>
+		</group_member>
+	</group_member_list>
+
+	
+	<command_list>
+		<command>
+			<command_id>refreshLocalCache</command_id>
+			<command_class>com.trendy.ec.console.cache.impl.MessageRecieveRefreshLocalCacheProcessorFactoryImpl</command_class>
+		</command>
+	</command_list>
+</message_group>

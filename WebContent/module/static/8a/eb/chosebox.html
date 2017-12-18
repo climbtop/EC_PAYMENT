@@ -1,0 +1,69 @@
+<!--选择产品属性 -->
+<div class="modal fade bs-example-modal-lg" id="choseBox" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header" style="border:none">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+            <div class="modal-body">
+                <!--产品属性-->
+
+                        <div class="text-center prodcut-top row">
+                            <div class="col-xs-12"><span id="choseBoxName"></span></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-2 col-sm-2">
+                                    <div class="smimgline" id="choseBoxImgSmall">
+
+                                        <!--<div class="col-md-12 col-sm-12 col-xs-4"><img class='cloudzoom-gallery img-responsive cloudzoom-gallery-active' src="/css/fiveplus/res/images/wcstore/2015/1151072290010/thumbs/image1.jpg" data-cloudzoom="useZoom: '.cloudzoom-pop', image: 'res/images/wcstore/2015/1151072290010/small/image1.jpg', zoomImage: 'res/images/wcstore/2015/1151072290010/large/image1.jpg' " ></div>
+                                        <div class="col-md-12 col-sm-12 col-xs-4"><img class='cloudzoom-gallery img-responsive' src="/css/fiveplus/res/images/wcstore/2015/1151072290010/thumbs/image2.jpg" data-cloudzoom="useZoom: '.cloudzoom-pop', image: 'res/images/wcstore/2015/1151072290010/small/image2.jpg', zoomImage: 'res/images/wcstore/2015/1151072290010/large/image2.jpg' " ></div>
+                                        <div class="col-md-12 col-sm-12 col-xs-4"><img class='cloudzoom-gallery img-responsive' src="/css/fiveplus/res/images/wcstore/2015/1151072290010/thumbs/image3.jpg" data-cloudzoom="useZoom: '.cloudzoom-pop', image: 'res/images/wcstore/2015/1151072290010/small/image3.jpg', zoomImage: 'res/images/wcstore/2015/1151072290010/large/image3.jpg' " ></div>
+                                        <div class="col-md-12 col-sm-12 col-xs-4"><img class='cloudzoom-gallery img-responsive' src="/css/fiveplus/res/images/wcstore/2015/1151072290010/thumbs/image4.jpg" data-cloudzoom="useZoom: '.cloudzoom-pop', image: 'res/images/wcstore/2015/1151072290010/small/image4.jpg', zoomImage: 'res/images/wcstore/2015/1151072290010/large/image4.jpg' " ></div>
+                                        <div class="col-md-12 col-sm-12 col-xs-4"><img class='cloudzoom-gallery img-responsive' src="/css/fiveplus/res/images/wcstore/2015/1151072290010/thumbs/image5.jpg" data-cloudzoom="useZoom: '.cloudzoom-pop', image: 'res/images/wcstore/2015/1151072290010/small/image5.jpg', zoomImage: 'res/images/wcstore/2015/1151072290010/large/image5.jpg' " ></div>
+                                        <div class="col-md-12 col-sm-12 col-xs-4"><img class='cloudzoom-gallery img-responsive' src="/css/fiveplus/res/images/wcstore/2015/1151072290010/thumbs/image6.jpg" data-cloudzoom="useZoom: '.cloudzoom-pop', image: 'res/images/wcstore/2015/1151072290010/small/image6.jpg', zoomImage: 'res/images/wcstore/2015/1151072290010/large/image6.jpg' " ></div>-->
+
+                                    </div>
+                            </div>
+                            <div class="col-md-6 col-sm-6" id="choseBoxImgBig">
+                                <!--<img class="cloudzoom cloudzoom-pop imgclick img-responsive center-block" src="/css/fiveplus/res/images/wcstore/2015/1151072290010/small/image1.jpg" />-->
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <div class="col-md-12 col-sm-12">
+                                    <ul class="list-group productattr">
+                                        <li class="list-group-item">
+                                            <div style="height:30px;line-height:30px;color:#777">款号 | <span id="choseBoxSku"></span></div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <h2 class="price" id="choseBoxPrice"><!-- <span>￥</span>739 --></h2>
+
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div>
+                                                <div class="row" style="padding-top:10px;padding-bottom:10px"><div class="col-md-7 col-xs-7">请选择尺码</div><div class="col-md-5 col-xs-5 text-right"><!--<a class="agery" href="javascript:;" data-toggle="modal" data-target="#myModal"> 尺码表</a>--></div></div>
+                                                <div class="row" style="margin-left:0" id="choseBoxSize">
+
+                                                    <!-- <div class="col-md-2 col-sm-6 col-xs-2 sizebox sizeboxdisable">XS</div>
+                                                    <div class="col-md-2 col-sm-6 col-xs-2 sizebox">S</div>
+                                                    <div class="col-md-2 col-sm-6 col-xs-2 sizebox sizeboxactive">M</div> -->
+
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item">
+                                            <div class="row" style="height:85px;padding-top:20px;">
+                                                <button type="button" class="btn col-md-12 col-sm-12 col-xs-12" style="background-color:#000;color:#fff;border:2px solid #000" id="btnListAddCart">加入购物袋</button>
+                                                <div class="col-md-12 col-sm-12 col-xs-12" style="height:10px"></div><!-- <button type="button" class="btn col-md-12 col-sm-12 col-xs-12" style="background-color:#fff;color:#000;border:2px solid #000">立刻购买</button> -->
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                <!--产品属性结束-->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 选择产品属性结束-->

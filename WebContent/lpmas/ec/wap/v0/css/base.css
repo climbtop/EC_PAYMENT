@@ -1,0 +1,123 @@
+body,div,p,span,image,button,input, textarea,ul,li{ margin: 0; padding:0;}
+body{ font-size: 100%; max-width: 640px; margin: 0 auto;min-width: 320px; height: 100%;}
+html{
+    -webkit-text-size-adjust: none;
+    -webkit-appearance: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    font-size: 62.5%;
+    font-family:'Microsoft Yahei';
+height: 100%;}
+input,textarea{ -webkit-appearance:none;border-radius: 0;}
+ul{list-style: none}
+a{text-decoration: none;}
+
+i{font-style: normal}
+.box-s{ box-sizing: border-box;-webkit-box-sizing: border-box}
+.border-r{ border-radius:4px;-webkit-border-radius: 4px;-moz-border-radius: 4px;}
+.border-r1{border-radius:50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;}
+.border-r2{border-bottom-left-radius:2px;-webkit-border-bottom-left-radius:2px;border-top-left-radius:2px;-webkit-border-top-left-radius:2px;  }
+.border-r3{border-bottom-right-radius:2px;-webkit-border-bottom-right-radius:2px;border-top-right-radius:2px;-webkit-border-top-right-radius:2px;  }
+.fl{float:left;}
+.fr{float:right;}
+.pa{padding:2rem}
+.pa1{padding: 0 !important;}
+.pa2{padding: 0rem 0rem 0rem 1.5rem}
+.pa3{padding-bottom: 1rem}
+.pa4{padding: 1rem 0;}
+.pa5{padding: 0 1.5rem}
+.pa6{padding: 2rem 0 1rem}
+.pa7{padding: 0.7rem 0.7rem 0 0.7rem}
+.pa8{padding: 0.7rem}
+.pa9{padding-bottom: 4rem;}
+.pa10{padding: 4rem 3rem 1rem;}
+.pa11{padding: 1rem 1.5rem}
+.pa12{padding: 1rem 0rem 1rem 1.5rem}
+.ma{ margin-left: 1rem;}
+.ma1{margin-bottom: 6rem;}
+.ma2{margin-top: 2.5rem;}
+.ma3{ margin-right: 0.5rem}
+.ma4{margin-top: -1rem;}
+.ma5{margin:4rem auto 2rem !important;}
+.ma6{margin:4rem auto 0 !important;}
+.ma7{margin-bottom: 1rem}
+.w1{width: 100% !important;}
+.w2{width: 16rem !important;}
+.w3{width: 75% !important;}
+.w4{width: 30% !important;}
+.w5{width: 7rem !important;}
+.w6{width: 23rem !important;}
+.w7{width: 21rem !important;}
+.w8{width: 12.5rem !important;}
+.w9{width: 26rem !important;}
+.s_fs{font-size: 1.2rem}
+.s_fs1{font-size: 1.4rem}
+.s_fs2{font-size: 1.7rem}
+.s_fs3{font-size: 1.3rem}
+.s_fs4{font-size: 1.6rem !important;}
+.s_fs5{font-size: 1rem;}
+.s_fs6{font-size: 4rem;}
+.h_lh{height: 4.5rem;line-height:4.5rem;}
+.h_lh1{height:2rem;line-height:2rem;}
+.h_lh2{height: 2.9rem;line-height: 3.2rem}
+.h_lh3{height:2rem;line-height:3rem;}
+.h_lh4{height: 3rem;line-height: 4rem;}
+.h_lh5{height: 3rem;line-height: 3rem;}
+.h_lh6{height: 5rem;line-height: 5rem;}
+.h_lh7{height:1.8rem !important;line-height: 1.8rem !important;}
+.h_lh8{height:2.5rem;line-height:2.5rem;}
+.h_lh9{height:1.5rem;line-height:1.5rem;}
+.h_lh10{height:4rem;line-height:4rem;}
+.h_lh11{line-height:2.5rem;}
+.back_c{background-color: #799276}
+.back_c1{background-color:#8BAE8B}
+.back_c2{background-color:#8BAE8B}
+.back_c3{background:rgba(93,171,47,0.5);}
+.back_c4{background:rgba(93,171,47,1);}
+.back_c5{background:#E1E3E4}
+.back_c6{background:transparent}
+.back_c7{background-color: #8BAE8B}
+.back_c8{background-color: #C1C2C3}
+.back_c9{background-color:transparent !important;}
+.back_c10{background-color: #fff}
+.tl{text-align: left !important;}
+.c_1{color: #C1C2C3;}
+.c_2{color:#8BAE8B;}
+.c_3{color: #444;}
+.c_4{color: #fff;}
+.c_5{color: #333333}
+.c_6{color: #000000}
+.c_7{color: #666666}
+.c_8{color: #F5A623}
+.dis{display: inline-block}
+.dis1{display: block}
+.ve_t{vertical-align: top}
+.ve_t1{vertical-align: middle}
+.po_r{position: relative !important;}
+.right{right: 0 !important;}
+.bor{ border-bottom: 1px solid #e1e3e4}
+.bot{ border-top: 1px solid #e1e3e4}
+.f_w{font-weight: bold;}
+.ti{text-indent: 2.2rem}
+
+.order_title a,
+.order_title a:active,
+.order_title a:hover,
+.order_title a:visited{color: #333333}
+.order_num div p:first-child a,
+.order_num div p:first-child a:active,
+.order_num div p:first-child a:hover,
+.order_num div p:first-child a:visited{color: #333333}
+
+a .person_box,
+a:hover .person_box,
+a:active .person_box,
+a:visited .person_box{color: #333}
+
+a .person_box p:last-child,
+a:active .person_box p:last-child,
+a:hover .person_box p:last-child,
+a:visited .person_box p:last-child{color: #c1c2c3}
+.go_register:visited{color: #8BAE8B;}
+a:active .active_bg{background-color: #e1e3e4}

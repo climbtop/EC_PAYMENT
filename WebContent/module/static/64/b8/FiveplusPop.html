@@ -1,0 +1,151 @@
+<script>
+(function() {
+	var listPicShow = '';
+	var bs = null;
+	var sale = {
+		'1' : '新品到店',
+		'22' : '新品到店'
+	};
+
+	if (t$('calendarDate')) {
+		bs = t$('calendarDate').getElementsByTagName('b');
+		for (var i = 0, l = bs.length; i < l; i++) {
+			if (bs[i].innerHTML in sale) {
+				bs[i].className = 'selected';
+				bs[i].title = sale[bs[i].innerHTML];
+			}
+		}
+	}
+
+	/*****前台列表页右侧pop图片***/
+	if (typeof(typeName) != 'undefined') {
+		if (typeName != '') {
+			switch (typeName) {
+
+				/*编辑列表页栏目右边pop*/
+				case '配饰':
+					listPicShow = 'http://img2.fiveplus.com/rs/fiveplus/v1/res/obj/2015/06/29/fp_ps.jpg';
+					break;
+				case '鞋包':
+					listPicShow = 'http://img2.fiveplus.com/rs/fiveplus/v1/res/obj/2015/06/29/fp1.jpg';
+					break;
+				case '新品':
+					listPicShow = 'http://img2.fiveplus.com/rs/fiveplus/v1/res/obj/2015/06/09/33_cc_pop.jpg';
+					break;
+				case '服装':
+					listPicShow = 'http://img2.fiveplus.com/rs/fiveplus/v1/res/obj/2015/06/29/fp_fs.jpg';
+					break;
+				case 'T恤':
+					listPicShow = 'http://img2.fiveplus.com/rs/fiveplus/v1/res/obj/2015/06/29/fp_fs.jpg';
+					break;
+				case '连衣裙':
+					listPicShow = 'http://img2.fiveplus.com/rs/fiveplus/v1/res/obj/2015/06/29/fp_fs.jpg';
+					break;
+				case '外套':
+					listPicShow = 'http://img2.fiveplus.com/rs/fiveplus/v1/res/obj/2015/06/29/fp_fs.jpg';
+					break;
+				case '衬衫':
+					listPicShow = 'http://img2.fiveplus.com/rs/fiveplus/v1/res/obj/2015/06/29/fp_fs.jpg';
+					break;
+				case '裤装':
+					listPicShow = 'http://img2.fiveplus.com/rs/fiveplus/v1/res/obj/2015/06/29/fp_fs.jpg';
+					break;
+				default:
+					listPicShow = 'http://img2.fiveplus.com/rs/fiveplus/v1/res/obj/2015/06/29/fp1.jpg';
+					break;
+			}
+		}
+	}
+
+
+	/*重名处理*/
+	if (typeof(pageParams) != 'undefined') {
+		if ('cateId' in pageParams) {
+
+			/*if(。。){。。}部分为模板，不要改动*/
+			/*复制开始->   if (pageParams.cateId == '337512') {
+			listPicShow='<a href="http://www.fiveplus.com/product/841-3766001.shtml"  target="_blank"><img src="/obj/2013/03/05/maizenchuchuang20130305.jpg" /></a>';
+			}  <-复制结束*/
+
+			/*if (pageParams.cateId == '352597') {
+			listPicShow='<img src="/obj/2013/06/13/lyq_cc_1361.jpg">';
+			}*/
+
+		}
+	}
+
+	if (t$('listTopPop')) {
+		if (listPicShow) t$('listTopPop').src = listPicShow;
+	}
+
+	//搜索位置重置
+	if (false) {
+		var searchItem = [];
+		var searchNow = new Date();
+		var searchStart, searchStop, searchDateNum;
+
+		//添加方式:复制 searchItem.push(['', '', '', '']);
+		//按照顺序在''中填写：
+		//1、活动关键字
+		//2、活动开始日期 年-月-日-小时(0-23)-分(5-59)， 比如2013-5-6-0-0, 2013年5月6日零点  2013-5-7-14-30 2013年5月7日14点30分
+		//3、活动结束日期，写法同上
+		//4、活动的链接
+		//完整示例：searchItem.push(['母亲节活动', '2013-5-6-0-0', '2013-5-7-0-0', 'http://www.ochirly.com/women/Promotion/Mothers_Day/list.shtml?ad=index_focus2']);
+		searchItem.push(['3.8精选新品5-7折', '2014-3-6-0-0', '2014-3-10-0-0', 'http://www.fiveplus.com/women/Promotion/38_Women_s_Day/list-1-40-0-0-0-0-0-0-ochirly,fiveplus-0-1.shtml']);
+		searchItem.push(['精选新品7折', '2014-4-29-0-0', '2013-5-4-0-0', 'http://www.fiveplus.com/women/Promotion/Labors_Day_Special/list.shtmltml?ad=index_focus2']);
+		searchItem.push([' 浓情国庆礼  精选新品 30%OFF ', '2014-9-28-0-0', '2014-10-6-10-0', 'http://www.fiveplus.com/women/National_Day_Promote/list.shtml?ad=index_focus2']);
+
+		for (var i = 0; i < searchItem.length; i++) {
+			searchDateNum = searchItem[i][1].split('-');
+			searchStart = new Date(searchDateNum[0], searchDateNum[1] - 1, searchDateNum[2], searchDateNum[3], searchDateNum[4]);
+
+			searchDateNum = searchItem[i][2].split('-');
+			searchStop = new Date(searchDateNum[0], searchDateNum[1] - 1, searchDateNum[2], searchDateNum[3], searchDateNum[4]);
+
+			if (searchNow >= searchStart && searchNow <= searchStop) {
+				var searchInput = document.getElementById('navIntSearch');
+				var searchBtn = searchInput.parentNode.getElementsByTagName('button')[0];
+
+				searchInput.value = searchItem[i][0];
+				searchInput.style.color = '#990033';
+
+				searchBtn.onclick = function() {
+					var v = searchInput.value;
+					if (!v) return;
+
+					if (v == searchItem[i][0]) {
+						window.location.href = searchItem[i][3];
+					} else _search.doSearch(v);
+				}
+
+				$(searchInput).unbind('keypress');
+				$(searchInput).unbind('focus');
+				$(searchInput).unbind('blur');
+
+				searchInput.onblur = function() {
+					var v = searchInput.value;
+					if (!v) searchInput.value = searchItem[i][0];
+				}
+
+				$(searchInput).keypress(function(event) {
+					if (event.which == 13) {
+						if (!this.value) return;
+						if (this.value == searchItem[i][0]) {
+							window.location.href = searchItem[i][3];
+							return false;
+						} else _search.doSearch(this.value);
+					}
+				}).focus(function() {
+					if (this.value == searchItem[i][0]) this.select();
+				});
+
+				break;
+			}
+
+		}
+
+	}
+	//搜索位置重置结束
+
+})();
+</script>

@@ -1,0 +1,50 @@
+package com.trendy.ow.portal.payment.weixin.action;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.trendy.fw.tools.exception.PortalServletException;
+import com.trendy.ow.portal.payment.business.PayReceiver;
+import com.trendy.ow.portal.payment.weixin.business.WeixinJsApiPayReceiver;
+
+@WebServlet(urlPatterns = "/weixin/WeixinJsApiNotifyReceiver.do")
+public class WeixinJsApiNotifyReceiver extends HttpServlet {
+	private static final long serialVersionUID = 2016863623196925480L;
+	private static Logger log = LoggerFactory.getLogger(WeixinJsApiNotifyReceiver.class);
+
+	public WeixinJsApiNotifyReceiver() {
+		super();
+	}
+
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doPost(request, response);
+		return;
+	}
+
+	@Override
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException,
+			IOException {
+		PayReceiver processor = new WeixinJsApiPayReceiver();
+		try {
+			processor.processNotify(request, response);
+		} catch (Exception e) {
+			if (e  instanceof PortalServletException) {
+				log.info(e.getMessage());
+			}else {
+				log.error("WeixinJsApiNotifyReceiver 处理异常", e);
+			}
+			return;
+		}
+
+	}
+
+}

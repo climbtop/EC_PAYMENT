@@ -1,0 +1,32 @@
+<p class="pos" style="margin-bottom: 0;">
+
+Expression SectionKit is undefined on line 2, column 8 in stringTemp.
+The problematic instruction:
+----------
+==> list SectionKit.getSectionPathListBySectionId(SectionInfo.sectionId) as item [on line 2, column 1 in stringTemp]
+----------
+
+Java backtrace for programmers:
+----------
+freemarker.core.InvalidReferenceException: Expression SectionKit is undefined on line 2, column 8 in stringTemp.
+	at freemarker.core.TemplateObject.assertNonNull(TemplateObject.java:124)
+	at freemarker.core.TemplateObject.invalidTypeException(TemplateObject.java:134)
+	at freemarker.core.Dot._getAsTemplateModel(Dot.java:78)
+	at freemarker.core.Expression.getAsTemplateModel(Expression.java:89)
+	at freemarker.core.MethodCall._getAsTemplateModel(MethodCall.java:86)
+	at freemarker.core.Expression.getAsTemplateModel(Expression.java:89)
+	at freemarker.core.IteratorBlock.accept(IteratorBlock.java:94)
+	at freemarker.core.Environment.visit(Environment.java:210)
+	at freemarker.core.MixedContent.accept(MixedContent.java:92)
+	at freemarker.core.Environment.visit(Environment.java:210)
+	at freemarker.core.Environment.process(Environment.java:190)
+	at freemarker.template.Template.process(Template.java:237)
+	at com.trendy.fw.common.util.FreemarkerKit.generateFile(FreemarkerKit.java:249)
+	at com.trendy.fw.common.util.FreemarkerKit.generateFile(FreemarkerKit.java:220)
+	at com.trendy.ow.console.template.business.DynamicModuleGenerateBusiness.generateFile(DynamicModuleGenerateBusiness.java:35)
+	at com.trendy.ow.console.template.business.DynamicModuleAutoGenerate.autoGenerate(DynamicModuleAutoGenerate.java:23)
+	at sun.reflect.GeneratedMethodAccessor265.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.jcrontab.CronTask.runTask(CronTask.java:163)
+	at org.jcrontab.CronTask.run(CronTask.java:272)

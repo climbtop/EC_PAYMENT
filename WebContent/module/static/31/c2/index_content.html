@@ -1,0 +1,57 @@
+<!--幻灯片-->
+    <div class="container-fluid index_random" style="padding:0" id="indexRandom">
+     <div class="row">
+                <div class="col-md-12 col-sm-12"><img class="img-responsive" src="http://img2.fiveplus.com/rs/fiveplus/v1/res/images/blank.gif" data-src="http://img2.fiveplus.com/material/2015/10/27/20151027150313788.jpg"></div>
+           </div>
+        
+        
+        
+        
+        <div class="index_pop_headline">
+            <p>FUN FLOWERS</p>
+            <a href="http://www.fiveplus.com/a/article/pages/shopping.shtml">CLICK IN &gt;</a>
+        </div>
+    </div>
+    <script>
+        (function(){
+           var l = $('#indexRandom .row').length,
+                r;
+           if (l < 1) return;
+           $('#indexRandom .row').css({'display':'none'});
+            r = parseInt(l * Math.random());
+            $('#indexRandom .row').eq(r).css({'display':'block'});
+            $('#indexRandom .row').eq(r).find('img').eq(0).attr('src', $('#indexRandom .row').eq(r).find('img').eq(0).attr('data-src'));
+        })();
+    </script>
+<!--幻灯片结束-->
+<!--首页列表-->
+    <div class="container-fluid" id="main_list">
+        <div class="row">
+
+            <a href="http://www.fiveplus.com/a/article/pages/pc_nvshen_1031.shtml" target="_blank">
+                <div class="col-md-4 col-sm-4" data-anim="color" data-value="#000" data-tip="女神新装">
+                    <div style="background:#f0f0f0;border:4px solid #fff;padding:1px;box-sizing:content-box;">
+                    <img class="img-responsive" src="http://img2.fiveplus.com/material/2015/10/10/20151010120147757.jpg" />
+                    </div>
+                </div>
+            </a>
+
+            <a href="http://www.fiveplus.com/a/painting/wardrobe/list.shtml" target="_blank">
+<div class="col-md-4 col-sm-4" data-anim="color" data-value="#000" data-tip="吾家绘本">
+                    <div style="background:#f0f0f0;border:4px solid #fff;padding:1px;box-sizing:content-box;">
+                    <img class="img-responsive" src="http://img2.fiveplus.com/rs/fiveplus/v1/res/obj/2015/08/03/s_21.jpg" />
+                </div>
+                </div>
+            </a>
+
+            <a href="http://www.fiveplus.com/a/article/fashion_news/article_beijing.shtml" target="_blank">
+                <div class="col-md-4 col-sm-4" data-anim="color" data-value="#000" data-tip="Fun趣">
+                    <div style="background:#f0f0f0;border:4px solid #fff;padding:1px;box-sizing:content-box;">
+                    <img class="img-responsive" src="http://img2.fiveplus.com/material/2015/10/12/20151012145306270.jpg" />
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+<!--首页列表结束-->

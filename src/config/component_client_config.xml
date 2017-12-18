@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component_servers>
+	<component_server>
+		<app_id>System</app_id>
+		<servers>
+			<server>ice.lpmas.com:60001</server><!-- 格式：服务器IP+“:”+端口号 -->
+		</servers>
+	</component_server>
+	<component_server>
+		<app_id>Region</app_id>
+		<servers>
+			<server>ice.lpmas.com:60002</server>
+		</servers>
+	</component_server>
+</component_servers>

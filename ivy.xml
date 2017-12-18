@@ -1,0 +1,54 @@
+<ivy-module version="1.0"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"            
+            xsi:noNamespaceSchemaLocation="http://ant.apache.org/ivy/schemas/ivy.xsd">
+    <info organisation="trendy" module="poc_test"/>
+
+	<configurations>
+		<include file="../EC_BASE/default-ivy-configurations.xml"/>
+	</configurations>
+     
+	<dependencies>
+		<dependency org="apache" name="httpcore" rev="4.0.1" transitive="false"/>
+		<dependency org="apache" name="httpclient" rev="4.0.3" transitive="false"/>
+		<dependency org="apache" name="commons-logging" rev="1.1.1" transitive="false"/>
+		<dependency org="apache" name="commons-lang" rev="2.4" transitive="false"/>
+		<dependency org="apache" name="commons-beanutils" rev="1.8.3" transitive="false"/>
+		<dependency org="apache" name="commons-pool" rev="1.3" transitive="false"/>
+		<dependency org="apache" name="commons-httpclient" rev="3.0.1" transitive="false"/>	
+		<dependency org="apache" name="commons-collections" rev="3.2.1" transitive="false"/>
+		<dependency org="apache" name="commons-codec" rev="1.3" transitive="false"/>
+		<dependency org="apache" name="xercesImpl" rev="2.11.0" transitive="false"/>	
+		<dependency org="apache" name="log4j" rev="1.2.15" transitive="false"/>	
+		<dependency org="apache" name="commons-io" rev="1.2" transitive="false"/>
+		<dependency org="apache" name="commons-fileupload" rev="1.3" transitive="false"/>
+		<dependency org="json" name="json-path" rev="0.9.0" transitive="false"/>
+		<dependency org="json" name="json-lib" rev="2.4" transitive="false"/>	
+		<dependency org="json" name="ezmorph" rev="1.0.4" transitive="false"/>	
+		<dependency org="slf4j" name="slf4j-api" rev="1.6.4" transitive="false"/>
+		<dependency org="slf4j" name="slf4j-log4j12" rev="1.6.4" transitive="false"/>
+		<dependency org="dom4j" name="dom4j" rev="1.6.1" transitive="false"/>
+		<dependency org="freemarker" name="freemarker" rev="2.3.16" transitive="false"/>
+		<dependency org="proxool" name="proxool-cglib" rev="1.0" transitive="false"/>
+		<dependency org="proxool" name="proxool" rev="0.9.1" transitive="false"/>
+		<dependency org="jdbcdriver" name="mysql-connector-java" rev="5.1.10" transitive="false"/>	
+		<dependency org="ice" name="Ice" rev="3.4.2" transitive="false"/>
+		<dependency org="memcached" name="java-memcached" rev="2.6.3" transitive="false"/>				
+		<dependency org="jackson" name="jackson-core" rev="2.5.0" transitive="false"/>
+		<dependency org="jackson" name="jackson-databind" rev="2.5.0" transitive="false"/>
+		<dependency org="jackson" name="jackson-annotations" rev="2.5.0" transitive="false"/>		
+		
+		<dependency org="trendy" name="trendy-admin-client" rev="0.1.1" transitive="false"/>
+		<dependency org="trendy" name="trendy-system-client" rev="0.1.7" transitive="false"/>
+		<dependency org="trendy" name="trendy-region-client" rev="0.1.0" transitive="false"/>
+		<dependency org="oscache" name="oscache" rev="2.4.1" transitive="false"/>
+		<dependency org="jaxen" name="jaxen" rev="1.1-beta-6" transitive="false"/>
+		<dependency org="trendy" name="trendy-framework" rev="0.1.11" transitive="false"/>		
+		<dependency org="trendy" name="trendy-tools" rev="1.4.0" transitive="false"/>
+		<dependency org="trendy" name="trendy-passport-client" rev="0.1.1" transitive="false"/>
+		<dependency org="google" name="zxing-core" rev="2.1" transitive="false"/>
+		
+		<dependency org="trendy" name="trendy-console" rev="0.1.0" transitive="false"/>
+		<dependency org="jgroups" name="jgroups" rev="3.6.1" transitive="false"/>
+	</dependencies>
+        
+</ivy-module>		

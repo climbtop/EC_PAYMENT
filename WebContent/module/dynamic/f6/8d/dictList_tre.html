@@ -1,0 +1,27 @@
+<script>
+	var treNavTree = {};
+</script>
+<div class="nav2013 tre_nav2013" id="nav2013">
+	<div class="nav2013_ul_box tre_nav2013_ul_box">
+		<ul>
+			<li class="first"><a href="/index.shtml" id="homeLink" >首页</a></li>
+						<li class="last">
+				<span style="color:#ffffff;">客服营业时间 : 9:00-18:00</span>
+			</li>
+		</ul>
+	</div>
+	<div id="nav2013Mask" class="nav2013_mask"></div>
+</div>
+<script>
+	_headeffect();
+	(function(){
+		if (location.href.indexOf('://my.') >= 0) {
+			var links = document.getElementById('nav2013').getElementsByTagName('a');
+			for (var i = 0; i < links.length; i++) {
+				if (links[i].getAttribute('href', 2).indexOf('http') != 0) { 
+					links[i].href = host + links[i].getAttribute('href', 2);
+				}
+			}
+		}
+	})();
+</script>
